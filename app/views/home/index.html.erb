@@ -1,0 +1,21 @@
+<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+<p>
+you are loggen in as <%= current_user.roll%>
+</p>
+<% if current_user.roll == "buyer" %>
+ <p>
+
+
+</p>
+ <% %>
+ <%= button_to 'log out',   destroy_user_session_path, method: :delete %>
+ <%@product.each do |f|%>
+<%= f.name%>
+<%= f.price%>
+<%end%>
+
+<p>seller</p>
+ <%else%>
+ <%= link_to 'create_add', new_product_path%>
+ <%end%>
